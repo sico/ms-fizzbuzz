@@ -1,0 +1,27 @@
+<%= form_with model: @number, local: true do |f| %>
+  <p>
+    <%= f.label :Enter_number %>
+    <%= f.number_field :number %>
+    <input type="submit">
+  </p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Result</th>
+    <th colspan="3"></th>
+  </tr>
+
+<h4>Previous numbers</h4>
+
+<% @numbers.each do |number| %>
+  <tr>
+    <td><%= number.number %></td>
+    <td><%= fizzbuzz(number.number)%></td>
+  </tr>
+
+<% end %>
+</table>
+
+<%= link_to 'Back', controller: 'welcome' %>

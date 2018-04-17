@@ -1,28 +1,28 @@
-def fizzbuzz(number)
-  if is_divisible_by_fifteen?(number)
+def fizzbuzz(fizzy)
+  if is_divisible_by_fifteen?(fizzy)
     'Fizz Buzz'
-  elsif is_divisible_by_three?(number)
+  elsif is_divisible_by_three?(fizzy)
     'Fizz'
-  elsif is_divisible_by_five?(number)
+  elsif is_divisible_by_five?(fizzy)
     'Buzz'
   else
-    number
+    fizzy
   end
 end
 
 
-def is_divisible_by_three?(number)
-  is_divisible_by?(number, 3)
+def is_divisible_by_three?(fizzy)
+  is_divisible_by?(fizzy, 3)
 end
 
-def is_divisible_by_five?(number)
-  is_divisible_by?(number, 5)
+def is_divisible_by_five?(fizzy)
+  is_divisible_by?(fizzy, 5)
 end
 
-def is_divisible_by_fifteen?(number)
-  is_divisible_by?(number, 15)
+def is_divisible_by_fifteen?(fizzy)
+  is_divisible_by?(fizzy, 15)
 end
 
-def is_divisible_by?(number, divisor)
-  number % divisor == 0
+def is_divisible_by?(fizzy, divisor)
+  (fizzy % divisor).zero?
 end
