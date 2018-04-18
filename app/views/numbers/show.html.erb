@@ -1,5 +1,17 @@
 <h2> You got </h2>
 
-<h3> <%= fizzbuzz(@number.number) %></h3>
+<% result = fizzbuzz(@number.number) %>
+
+<h3><%= result %></h3>
+
+<% if result == 'Fizz' %>
+  <iframe>Giphy.random</iframe>
+<% elsif result == 'Buzz' %>
+  <iframe src="https://giphy.com/embed/OzFPEMJFjm4lW" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-bee-OzFPEMJFjm4lW">via GIPHY</a></p>
+<% elsif result == 'Fizz Buzz' %>
+  <iframe src="https://giphy.com/embed/12R2bKfxceemNq" width="458" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/buzz-lightyear-12R2bKfxceemNq">via GIPHY</a></p>
+<% else %>
+  <iframe src="https://giphy.com/embed/26xBI73gWquCBBCDe" width="480" height="295" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reactionseditor-winona-ryder-26xBI73gWquCBBCDe">via GIPHY</a></p>
+<% end %>
 
 <%= link_to 'Back', controller: 'numbers' %>
