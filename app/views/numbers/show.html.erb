@@ -1,17 +1,27 @@
-<h2> You got </h2>
+<!doctype html>
+<html>
+  <body>
+    <div class="show">
+      <h2> YOU GOT </h2>
 
-<% result = fizzbuzz(@number.number) %>
+      <% result = fizzbuzz(@number.number) %>
+      <% # optional to destroy number, but won't be able to reload the page: @number.destroy %>
 
-<h3><%= result %></h3>
+      <em><h2><%= result %></h2></em>
 
-<% if result == 'Fizz' %>
-  <iframe>Giphy.random</iframe>
-<% elsif result == 'Buzz' %>
-  <iframe src="https://giphy.com/embed/OzFPEMJFjm4lW" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-bee-OzFPEMJFjm4lW">via GIPHY</a></p>
-<% elsif result == 'Fizz Buzz' %>
-  <iframe src="https://giphy.com/embed/12R2bKfxceemNq" width="458" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/buzz-lightyear-12R2bKfxceemNq">via GIPHY</a></p>
-<% else %>
-  <iframe src="https://giphy.com/embed/26xBI73gWquCBBCDe" width="480" height="295" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reactionseditor-winona-ryder-26xBI73gWquCBBCDe">via GIPHY</a></p>
-<% end %>
+      <% if result == 'Fizz' %>
+        <iframe src="https://giphy.com/embed/8pMS5BXOUVZyo" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+      <% elsif result == 'Buzz' %>
+        <iframe src="https://giphy.com/embed/OzFPEMJFjm4lW" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+      <% elsif result == 'Fizz Buzz' %>
+        <iframe src="https://giphy.com/embed/12R2bKfxceemNq" width="458" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+      <% else %>
+        <h3>Not a FIZZ, not a BUZZ. Try again!</h3>
+        <iframe src="https://giphy.com/embed/26xBI73gWquCBBCDe" width="480" height="295" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+      <% end %>
 
-<%= link_to 'Back', controller: 'numbers' %>
+      <%= link_to 'TRY AGAIN', controller: 'numbers' %><br>
+      <%= link_to 'Home', controller: 'welcome' %>
+    </div>
+  </body>
+</html>

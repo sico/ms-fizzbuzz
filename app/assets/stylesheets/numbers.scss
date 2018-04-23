@@ -1,3 +1,64 @@
 // Place all the styles related to the Numbers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.numbers {
+  font-family: CenturyGothic, Helvetica, sans-serif;
+  color: white;
+  line-height: 2;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 120px;
+  margin: 20px;
+  background: linear-gradient(to bottom right, yellow, purple);
+}
+
+.submit {
+  font-size: 15px;
+  background-size: 20px;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.submit:active {
+  background-color: #c1628c;
+  font-size: 20px;
+  color: white;
+}
+
+.numbers form {
+  color: white;
+  font-size: 20px;
+}
+
+.show {
+  font-family: CenturyGothic, Helvetica, sans-serif;
+  color: white;
+  line-height: 2;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 80x;
+  padding-top: 20px;
+  margin: 20px;
+  background: linear-gradient(to bottom right, purple, blue);
+}
+
+.show a {
+  background-color: darkblue;
+  border: none;
+  border-radius: 15%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.show a:hover {
+  background-color: #663399;
+}

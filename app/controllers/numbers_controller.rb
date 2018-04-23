@@ -23,6 +23,12 @@ class NumbersController < ApplicationController
   end
 end
 
+  def destroy
+    @number = Number.find(params[:id])
+    @number.destroy
+    redirect_to 'number#index'
+  end
+
 def number_params
   params.permit(:number)
 end
