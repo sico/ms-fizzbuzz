@@ -1,4 +1,4 @@
-require 'GiphyClient.rb'
+require 'GiphyClient'
 
 api_instance = GiphyClient::DefaultApi.new
 
