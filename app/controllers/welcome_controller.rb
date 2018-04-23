@@ -22,6 +22,8 @@ class WelcomeController < ApplicationController
       fmt: "json" # String | Used to indicate the expected response format. Default is Json.
     }
 
+
+
   end
 
 end
